@@ -8,6 +8,6 @@
     "dev:client": "cd client && npm run start"
   },
   "engines": {
-    "node": "8.9.4"
+    "node": "8.9.4" 
   }
 }

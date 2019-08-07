@@ -1,0 +1,52 @@
+/* Upper Trip Bars (Details & Weather) */
+.center {
+    display: flex;
+    justify-content: space-evenly;
+}
+.trip-details {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 25vw;
+}
+.weather-bar {
+    display: flex;
+    justify-content: center;
+}
+.loc-form-div {
+    padding-top: 25px;
+}
+li {
+    margin: 0px;
+}
+
+/* Item Columns for Clothing, Toiletries, Electronics, & Special */
+.item-columns {
+    display: flex;
+    margin: 0 50px;
+}
+.item-columns h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+.item-columns > div {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+    border: solid;
+    margin: 0 5px;
+    width: 300px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+.add-item {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+/* .list-format > * {
+    display: flex;
+} */

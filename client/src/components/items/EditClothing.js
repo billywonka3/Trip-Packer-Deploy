@@ -18,7 +18,7 @@ class EditClothing extends Component {
 
     event.preventDefault();
 
-    axios.post(`http://localhost:5000/api/clothing/update/${this.props.theClothing._id}`,
+    axios.post(`${process.env.REACT_APP_BASE}/clothing/update/${this.props.theClothing._id}`,
         { theCategory: category,
           theName: name,
           // theweight: weight,

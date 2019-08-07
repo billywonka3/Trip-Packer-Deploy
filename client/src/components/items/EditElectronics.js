@@ -16,7 +16,7 @@ class EditElectronics extends Component {
 
     event.preventDefault();
 
-    axios.post(`http://localhost:5000/api/electronics/update/${this.props.theElectronics._id}`,
+    axios.post(`${process.env.REACT_APP_BASE}/electronics/update/${this.props.theElectronics._id}`,
         { theName: name,
           // theweight: weight,
          })

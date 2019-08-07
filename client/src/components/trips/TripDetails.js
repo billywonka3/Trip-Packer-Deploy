@@ -32,7 +32,7 @@ class TripDetails extends Component{
         .then((response) =>{
             for (let i = 0; i < 40; i+= 8) {
                 console.log("5 Days of Data", response.data.list[i])
-                this.setstate.
+                // this.setstate.
             }
             console.log("All the data", response.data);
         })
@@ -52,7 +52,7 @@ class TripDetails extends Component{
     }
 
     deleteClothing = (theID) =>{
-        axios.delete('http://localhost:5000/api/clothing/'+theID)
+        axios.delete(`${process.env.REACT_APP_BASE}/clothing/`+theID)
         .then(()=>{
             this.props.getData();
         })
@@ -61,7 +61,7 @@ class TripDetails extends Component{
         })
     }
     deleteToiletries = (theID) =>{
-        axios.delete('http://localhost:5000/api/toiletries/'+theID)
+        axios.delete(`${process.env.REACT_APP_BASE}/toiletries/`+theID)
         .then(()=>{
             this.props.getData();
         })
@@ -70,7 +70,7 @@ class TripDetails extends Component{
         })
     }
     deleteElectronics = (theID) =>{
-        axios.delete('http://localhost:5000/api/electronics/'+theID)
+        axios.delete(`${process.env.REACT_APP_BASE}/electronics/`+theID)
         .then(() =>{
             this.props.getData();
         })
@@ -134,9 +134,9 @@ class TripDetails extends Component{
             })  
         }
 
-        const showForecast = () => {
-            return 
-        }
+        // const showForecast = () => {
+        //     return 
+        // }
 
         if(this.props.ready)
             return(

@@ -10,7 +10,7 @@ class AddTrip extends Component {
    
   handleFormSubmit = (event) => {
     event.preventDefault();
-    axios.post("http://localhost:5000/api/trips", {
+    axios.post(`${process.env.REACT_APP_BASE}/trips`, {
        theTitle: this.state.newTitle,
        theDescription: this.state.newDescription
       }, {withCredentials: true })

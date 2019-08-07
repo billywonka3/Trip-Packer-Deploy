@@ -30,7 +30,7 @@ class App extends React.Component {
   }
 
   getAllTrips = () => {
-    axios.get(`http://localhost:5000/api/trips`, {withCredentials: true})
+    axios.get(`${process.env.REACT_APP_BASE}/trips`, {withCredentials: true})
     .then(responseFromApi => {
       // console.log(responseFromApi, '----response----')
       this.setState({
@@ -41,7 +41,7 @@ class App extends React.Component {
 
   getCurrentlyLoggedInUser = () =>{
     // this.service.currentUser()
-    axios.get('http://localhost:5000/api/auth/getcurrentuser', {withCredentials: true})
+    axios.get(`${process.env.REACT_APP_BASE}/auth/getcurrentuser`, {withCredentials: true})
     .then((response)=>{
       // console.log('fetching the user now')
       let theUser = response.data;
@@ -71,7 +71,7 @@ class App extends React.Component {
   }
 
   logout = () =>{
-    axios.post('http://localhost:5000/api/auth/logout', {}, {withCredentials: true})
+    axios.post(`${process.env.REACT_APP_BASE}/auth/logout`, {}, {withCredentials: true})
     .then((response)=>{
       console.log(response);
       this.getCurrentlyLoggedInUser();  

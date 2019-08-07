@@ -14,7 +14,7 @@ class AddClothing extends Component {
    
   handleFormSubmit = (event) => {
     event.preventDefault();
-    axios.post("http://localhost:5000/api/clothing", {
+    axios.post(`${process.env.REACT_APP_BASE}/clothing`, {
         theCategory: this.state.newCategory,
         theName: this.state.newName,
         // theWeight: this.state.newWeight,

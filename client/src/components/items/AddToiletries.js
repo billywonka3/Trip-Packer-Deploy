@@ -13,7 +13,7 @@ class AddToiletries extends Component {
    
   handleFormSubmit = (event) => {
     event.preventDefault();
-    axios.post("http://localhost:5000/api/toiletries", {
+    axios.post(`${process.env.REACT_APP_BASE}/toiletries`, {
         theName: this.state.newName,
         // theWeight: this.state.newWeight,
         theTrip: this.props.theTripToAddToiletriesTo

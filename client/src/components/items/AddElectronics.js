@@ -13,7 +13,7 @@ class AddElectronics extends Component {
    
   handleFormSubmit = (event) => {
     event.preventDefault();
-    axios.post("http://localhost:5000/api/electronics", {
+    axios.post(`${process.env.REACT_APP_BASE}/electronics`, {
         theName: this.state.newName,
         // theWeight: this.state.newWeight,
         theTrip: this.props.theTripToAddElectronicsTo

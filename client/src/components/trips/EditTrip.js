@@ -17,7 +17,7 @@ class EditTrip extends Component {
 
     event.preventDefault();
 
-    axios.post(`http://localhost:5000/api/trips/update/${this.props.theTrip._id}`,
+    axios.post(`${process.env.REACT_APP_BASE}/trips/update/${this.props.theTrip._id}`,
      { theTitle: title, theDescription: description })
     .then( () => {
         this.props.getAllTheTripsInAppJS();

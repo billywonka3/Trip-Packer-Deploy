@@ -16,7 +16,7 @@ class EditToiletries extends Component {
 
     event.preventDefault();
 
-    axios.post(`http://localhost:5000/api/toiletries/update/${this.props.theToiletries._id}`,
+    axios.post(`${process.env.REACT_APP_BASE}/toiletries/update/${this.props.theToiletries._id}`,
         { theName: name,
           // theweight: weight,
          })

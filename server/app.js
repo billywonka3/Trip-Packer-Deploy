@@ -55,21 +55,11 @@ app.use(session({
 // default value for title local
 // app.locals.title = 'Trip-Packer : Take the First Step on a new Journey';
 
-
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use(cors({
-  credentials: true,
-  origin: 
-  [
-    'http://localhost:3000', 
-    'https://trip-packer.herokuapp.com'
-  ]
-}));
-
 // Set up a whitelist and check against it:
-var whitelist = ['https://trip-packer.herokuapp.com', 'http://example2.com']
+var whitelist = ['https://trip-packer.herokuapp.com']
 var corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
@@ -80,8 +70,16 @@ var corsOptions = {
   }
 }
 
-// Then pass them to cors:
-app.use(cors(corsOptions));
+app.use(cors({
+  corsOptions,
+  credentials: true,
+  origin: 
+  [
+    'http://localhost:3000', 
+    'https://trip-packer.herokuapp.com'
+  ]
+}));
+
 
 
 // ================ ROUTES ==================

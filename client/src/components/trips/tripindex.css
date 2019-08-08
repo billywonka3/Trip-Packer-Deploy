@@ -12,18 +12,18 @@
 .trip-box1 {
   margin-bottom: 15px;
   border: solid;
-  width: 400px;
+  width: 300px;
   padding: 0px 20px 25px 20px;
 }
 .trip-box2 {
   margin-bottom: 15px;
   border: solid;
-  width: 405px;
+  width: 305px;
   padding: 10px 15px 15px 20px;
 }
 textarea {
   height: 10vh;
-  width: 395px;
+  width: 295px;
   box-sizing: border-box;	
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;

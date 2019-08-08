@@ -64,9 +64,24 @@ app.use(cors({
   origin: 
   [
     'http://localhost:3000', 
-    'https://trip-packer.herokuapp.com*'
+    'https://trip-packer.herokuapp.com'
   ]
 }));
+
+// Set up a whitelist and check against it:
+var whitelist = ['https://trip-packer.herokuapp.com', 'http://example2.com']
+var corsOptions = {
+  origin: function (origin, callback) {
+    if (whitelist.indexOf(origin) !== -1) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  }
+}
+
+// Then pass them to cors:
+app.use(cors(corsOptions));
 
 
 // ================ ROUTES ==================

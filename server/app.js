@@ -64,7 +64,7 @@ app.use(cors({
   origin: 
   [
     'http://localhost:3000', 
-    'https://trip-packer.herokuapp.com'
+    'https://trip-packer.herokuapp.com*'
   ]
 }));
 

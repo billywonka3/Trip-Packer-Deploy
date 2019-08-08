@@ -23,27 +23,26 @@ class TripDetails extends Component{
           
     handleChangeCity = (event) => {
         event.preventDefault();
-        // console.log(event)
-        // console.log("city is above")
-        this.setState({searchCity: event.target.value})
-        console.log(this.state.searchCity)
-        this.getLatLong()
-        this.getForecast()
-
+        // console.log('city', event)
+        this.setState({searchCity: event.target.value}, ()=>{
+            console.log(this.state.searchCity)
+            this.getLatLong()
+            this.getForecast()
+        })
     }
     handleChangeCountry = (event) => {
         event.preventDefault();
-        // console.log(event)
-        // console.log("country is above")
-        this.setState({searchCountry: event.target.value})
-        console.log(this.state.searchCountry)
-        this.getLatLong()
-        this.getForecast()
+        // console.log('country', event)
+        this.setState({searchCountry: event.target.value}, ()=>{
+            console.log(this.state.searchCountry)
+            this.getLatLong()
+            this.getForecast()
+        })
     }
     
     getLatLong = ()=>{
-        axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${this.state.searchCity},+${this.state.searchCountry}&key=`)
-        // axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=Paris,+France&key=`)
+        axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${this.state.searchCity},+${this.state.searchCountry}&key=AIzaSyDkgfr2SrXtnYOzlJ2srEoDGcGe13A5zfs`)
+        // axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=Paris,+France&key=AIzaSyDkgfr2SrXtnYOzlJ2srEoDGcGe13A5zfs`)
             .then((response) =>{
                 console.log("All the data", response);
                 this.setState({latitude: response.data.results[0].geometry.location.lat})
@@ -79,6 +78,9 @@ class TripDetails extends Component{
         script.src = `https://darksky.net/widget/default/${this.state.latitude},${this.state.longitude}/us12/en.js`
         script.async = true;
         document.body.appendChild(script);
+
+        
+
     }
 
     resetEdit = () =>{
@@ -89,7 +91,7 @@ class TripDetails extends Component{
     }
 
     deleteClothing = (theID) =>{
-        axios.delete('http://localhost:5000/api/clothing/'+theID)
+        axios.delete(`${process.env.REACT_APP_BASE}/clothing/`+theID)
         .then(()=>{
             this.props.getData();
         })
@@ -98,7 +100,7 @@ class TripDetails extends Component{
         })
     }
     deleteToiletries = (theID) =>{
-        axios.delete('http://localhost:5000/api/toiletries/'+theID)
+        axios.delete(`${process.env.REACT_APP_BASE}0/toiletries/`+theID)
         .then(()=>{
             this.props.getData();
         })
@@ -107,7 +109,7 @@ class TripDetails extends Component{
         })
     }
     deleteElectronics = (theID) =>{
-        axios.delete('http://localhost:5000/api/electronics/'+theID)
+        axios.delete(`${process.env.REACT_APP_BASE}/electronics/`+theID)
         .then(() =>{
             this.props.getData();
         })
@@ -146,11 +148,17 @@ class TripDetails extends Component{
             return theActualTrip.clothing.map((eachClothing, index)=>{
                 // console.log(eachClothing)
                 if(this.state.editing !== index)
-                    return ( <li key={eachClothing._id}>
-                                <h4>{eachClothing.category}</h4>
-                                <p>{eachClothing.name}</p>
-                                <button onClick = {()=>{this.edit(index)}}>Edit</button>
-                                <button onClick = {()=>{this.deleteClothing(eachClothing._id)}}>Delete</button>
+                    return ( <li>
+                                <div className="list-and-btn">
+                                    <div>
+                                        {/* <h4>{eachClothing.category}</h4> */}
+                                        <p>{eachClothing.name}</p>
+                                    </div>
+                                    <div>
+                                        <button onClick = {()=>{this.edit(index)}}>Edit</button>
+                                        <button className="delete-btn" onClick = {()=>{this.deleteClothing(eachClothing._id)}}>Delete</button>
+                                    </div>
+                                </div>
                             </li>
                     )
                 else
@@ -172,9 +180,9 @@ class TripDetails extends Component{
                                 <div>
                                     <p>{eachToiletries.name}</p>
                                 </div>
-                                <p>
+                                <div>
                                     <button className="delete-btn" onClick = {()=>{this.deleteToiletries(eachToiletries._id)}}>Delete</button>
-                                </p>
+                                </div>
                             </div>
                         </li>
                 )
@@ -200,7 +208,7 @@ class TripDetails extends Component{
 
         const showWidget = () => {
             return(
-                <iframe 
+                <iframe style={{overflow:'hidden'}}
                     height= "600px"
                     width="600px"
                     src={this.state.forecast}>
@@ -222,7 +230,7 @@ class TripDetails extends Component{
                         </div>
                     </div>
                     <div className="center">
-                        <div className="loc-form-div">
+                        <div className="lat-lng-search">
                             <form id="location-form">
                                 <input type="text" id="location-input" className="form-control form-control-lg" onChange={this.handleChangeCity} value={this.state.searchCity} placeholder="Enter City"/>
                                 <br/>
@@ -238,7 +246,7 @@ class TripDetails extends Component{
                     <hr />
 
                     <div>
-                        <div className="container weather-bar">
+                        <div className="weather-bar">
 
                             {showWidget()}
         

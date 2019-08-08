@@ -105,8 +105,12 @@ class App extends React.Component {
             toggleForm = {this.toggleForm}
           />
         }
-
-        <Home>  </Home>
+        
+        <Route exact path="/" render ={()=> 
+          <Home
+            
+          />}
+        />
 
         <Switch>
           <Route exact path="/api/trips" render ={(props)=> 

@@ -1,7 +1,16 @@
 /* Upper Trip Bars (Details & Weather) */
-.center {
+.morph-bar {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.details-text {
+    display: flex;
+    justify-content: space-around;
+    width: 400px;
+}
+.details-text div {
+    margin-right: 10px;
 }
 .trip-details {
     display: flex;
@@ -10,6 +19,19 @@
     width: 50vw;
     position: relative;
     /* top: -15px; */
+}
+.center {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    word-wrap: break-word;
+    margin: 15px 0;
+}
+.center a { 
+    width: 500px;
+    background:white;
+    opacity: 0.85;
+    font-size: 14px;
 }
 
 /* Geolocate for Latitude & Longitude */
@@ -33,6 +55,8 @@
     margin-top: -160px;
     height: 600px;
     overflow: hidden;
+    background:white;
+    opacity: 0.85;
 }
 iframe html{
     overflow: hidden !important;
@@ -49,7 +73,7 @@ p {
 }
 .item-columns {
     display: flex;
-    margin: 0 50px;
+    margin: 15px 50px;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -69,6 +93,13 @@ p {
     width: 350px;
     overflow-wrap: break-word;
     word-wrap: break-word;
+}
+.item-column {
+    background:white;
+    opacity: 0.8;
+    border-radius: 20px;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
 }
 .add-item {
     display: flex;

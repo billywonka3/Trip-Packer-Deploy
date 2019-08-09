@@ -11,6 +11,37 @@ nav {
   margin: 0 20px;
 }
 
+body {
+  background: url('/images/backgrounds/australia.jpg'); 
+  background-attachment:fixed;
+  background-size:cover;
+  background-position:center;
+  background-repeat: no-repeat; 
+}
+
+.landing-page {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 30vh;
+}
+.landing-text {
+  width: 500px;
+  text-align: center;
+  padding: 1px 10px;
+  background:white;
+  opacity: 0.8;
+  border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+}
+.img-stripe {
+  display: flex;
+  justify-content: center;
+}
+
+
+/*------------------ Login Pages ------------------*/
 .login-signup {
   display: flex;
   flex-direction: column;
@@ -19,9 +50,7 @@ nav {
   display: flex;
   justify-content: center;
 }
-
-/*------------------ Login Pages ------------------*/
-.signup-background {
+/* .signup-background {
     background-image: url(/images/backgrounds/cubicle.jpg); 
     background-size: cover; 
     background-repeat: no-repeat; 
@@ -30,7 +59,7 @@ nav {
     background-image: url(/images/backgrounds/japanese-doors3.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-  }
+  } */
   
   #login-menu {
     padding: 30px; }

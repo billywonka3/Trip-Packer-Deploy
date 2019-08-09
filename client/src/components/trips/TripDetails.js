@@ -220,43 +220,42 @@ class TripDetails extends Component{
         if(this.props.ready)
             return(
                 <div style={{paddingTop: '20px'}}>
-
-                    <div className="center">
-                        <div className= "trip-details">
-                            <span>
-                                <h2> {theActualTrip.title} </h2>
-                                <h5> {theActualTrip.description} </h5>
-                            </span>
+                    
+                    <div className='morph-bar'>
+                        <div>
+                            <div className="details-text">
+                                <div className= "trip-details">
+                                    <span>
+                                        <h2> {theActualTrip.title} </h2>
+                                        <h5> {theActualTrip.description} </h5>
+                                    </span>
+                                </div>
+                            </div>
+                            <div className="details-text">
+                                <div className="lat-lng-search">
+                                    <form id="location-form">
+                                        <input type="text" id="location-input" className="form-control form-control-lg" onChange={this.handleChangeCity} value={this.state.searchCity} placeholder="Enter City"/>
+                                        <br/>
+                                        <input type="text" id="location-input" className="form-control form-control-lg" onChange={this.handleChangeCountry} value={this.state.searchCountry}  placeholder="Enter Country"/>
+                                        {/* <br/>
+                                        <button onClick = {()=>{this.getLatLong()}}
+                                                className="btn btn-primary btn-block">Submit</button> */}
+                                    </form>
+                                </div>
+                                {showCoordinates()}
+                            </div>
                         </div>
-                    </div>
-                    <div className="center">
-                        <div className="lat-lng-search">
-                            <form id="location-form">
-                                <input type="text" id="location-input" className="form-control form-control-lg" onChange={this.handleChangeCity} value={this.state.searchCity} placeholder="Enter City"/>
-                                <br/>
-                                <input type="text" id="location-input" className="form-control form-control-lg" onChange={this.handleChangeCountry} value={this.state.searchCountry}  placeholder="Enter Country"/>
-                                {/* <br/>
-                                <button onClick = {()=>{this.getLatLong()}}
-                                        className="btn btn-primary btn-block">Submit</button> */}
-                            </form>
-                        </div>
-                        {showCoordinates()}
-                    </div>
 
-                    <hr />
-
-                    <div>
                         <div className="weather-bar">
-
                             {showWidget()}
-        
                         </div>
-                    </div>
 
+                    </div>
+                    
                     <hr />
 
                     <div className="item-columns">
-                        <div className= "clothing">
+                        <div className= "item-column">
                             <h3>Clothing</h3>
                             <div>
                                 <hr />
@@ -275,7 +274,7 @@ class TripDetails extends Component{
                             </div>
                         </div>
 
-                        <div className= "toiletries">
+                        <div className= "item-column">
                             <h3>Toiletries</h3>
                             <div>
                                 <hr />
@@ -294,7 +293,7 @@ class TripDetails extends Component{
                             </div>
                         </div>
 
-                        <div className= "electronics">
+                        <div className= "item-column">
                             <h3>Electronics</h3>
                             <div>
                                 <hr /> 

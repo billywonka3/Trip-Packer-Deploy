@@ -1,64 +1,45 @@
 .trip-main{
   display: flex;
   justify-content: center;
-  
 }
 .trip-column {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
   margin-top: 12px;
+  width: 70vw;
 }
 .trip-box1 {
-  margin-bottom: 15px;
+  margin: 10px;
   border: solid;
-  width: 300px;
+  width: 320px;
   padding: 0px 20px 25px 20px;
+  background:white;
+  opacity: 0.8;
+  border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
 }
+/* .tripbox1 p {
+  width: 420px;
+} */
 .trip-box2 {
-  margin-bottom: 15px;
+  margin: 10px;
   border: solid;
-  width: 305px;
+  width: 325px;
   padding: 10px 15px 15px 20px;
+  background:white;
+  opacity: 0.8;
+  border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
 }
 textarea {
   height: 10vh;
-  width: 295px;
+  width: 315px;
   box-sizing: border-box;	
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
 }
 
-/*------------------ Profile Page ------------------*/
-/* .profile-div {
-    padding: 0 100px;
-    width: 50%;
-  }
-  .white-input {
-    color: white;
-  }
-  .save-btn {
-    color: black;
-  }
-  #profile-buttons {
-    position: absolute;
-    top: 40px;
-    right: 50px;
-    display: flex;
-  }
-  .main-btn {
-    margin-right: 100px;
-  }
-  
-  #custom-section{
-    display: flex;
-    justify-content: center;
-    width: 500px;
-    margin : 75px 0 100px 300px;
-  }
-  .rightside form {
-    color: white;
-  }
-  .rightside div{
-      margin: 8px;
-  } */

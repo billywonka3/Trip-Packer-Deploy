@@ -23,7 +23,8 @@ body {
   display: flex;
   justify-content: center;
   position: relative;
-  top: 30vh;
+  top: 10vh;
+  /* right: 15vw; */
 }
 .landing-text {
   width: 500px;
@@ -38,6 +39,14 @@ body {
 .img-stripe {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 220px;
+  margin-bottom: 30px;
+
+}
+.img-stripe img {
+  height: 30vh;
+  width: 420px;
 }
 
 

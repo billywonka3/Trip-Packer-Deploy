@@ -41,7 +41,7 @@ class TripDetails extends Component{
     }
     
     getLatLong = ()=>{
-        axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${this.state.searchCity},+${this.state.searchCountry}&key=AIzaSyCevwx9-QVgeIJ1DsGAlRoUT1laBNUW4yg`)
+        axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${this.state.searchCity},+${this.state.searchCountry}&key=AIzaSyDkgfr2SrXtnYOzlJ2srEoDGcGe13A5zfs`)
         // axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=Paris,+France&key=AIzaSyDkgfr2SrXtnYOzlJ2srEoDGcGe13A5zfs`)
             .then((response) =>{
                 console.log("All the data", response);
@@ -78,8 +78,6 @@ class TripDetails extends Component{
         script.src = `https://darksky.net/widget/default/${this.state.latitude},${this.state.longitude}/us12/en.js`
         script.async = true;
         document.body.appendChild(script);
-
-        
 
     }
 
@@ -231,6 +229,7 @@ class TripDetails extends Component{
                                     </span>
                                 </div>
                             </div>
+                            
                             <div className="details-text">
                                 <div className="lat-lng-search">
                                     <form id="location-form">
@@ -243,6 +242,12 @@ class TripDetails extends Component{
                                     </form>
                                 </div>
                                 {showCoordinates()}
+                            </div>
+
+                            <hr />
+
+                            <div className="center center-div">
+                                <a href src="https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi"> Forecast not showing? Try this chrome extension - https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi </a>
                             </div>
                         </div>
 

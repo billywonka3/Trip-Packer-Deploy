@@ -41,7 +41,7 @@ class TripDetails extends Component{
     }
     
     getLatLong = ()=>{
-        axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${this.state.searchCity},+${this.state.searchCountry}&key=AIzaSyDkgfr2SrXtnYOzlJ2srEoDGcGe13A5zfs`)
+        axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${this.state.searchCity},+${this.state.searchCountry}&key=AIzaSyCevwx9-QVgeIJ1DsGAlRoUT1laBNUW4yg`)
         // axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=Paris,+France&key=AIzaSyDkgfr2SrXtnYOzlJ2srEoDGcGe13A5zfs`)
             .then((response) =>{
                 console.log("All the data", response);

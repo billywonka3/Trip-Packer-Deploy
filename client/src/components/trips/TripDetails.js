@@ -252,10 +252,9 @@ class TripDetails extends Component{
                             
                             <hr/>
                             
-                            <div>
+                            <div className="center center-div">
                                 <p> We have been having technical difficulties with the Geocode API which fetches the location for our forecast feature. Please bear with us while Google work's with us to repair this feature. </p>
                             </div>
-
                         </div>
 
                         <div className="weather-bar">

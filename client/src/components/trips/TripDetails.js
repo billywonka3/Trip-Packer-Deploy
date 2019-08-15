@@ -41,8 +41,8 @@ class TripDetails extends Component{
     }
     
     getLatLong = ()=>{
-        axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${this.state.searchCity},+${this.state.searchCountry}&key=AIzaSyDkgfr2SrXtnYOzlJ2srEoDGcGe13A5zfs`)
-        // axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=Paris,+France&key=AIzaSyDkgfr2SrXtnYOzlJ2srEoDGcGe13A5zfs`)
+        // axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${this.state.searchCity},+${this.state.searchCountry}&key=AIzaSyDkgfr2SrXtnYOzlJ2srEoDGcGe13A5zfs`)
+        axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=Miami,+US&key=AIzaSyDkgfr2SrXtnYOzlJ2srEoDGcGe13A5zfs`)
             .then((response) =>{
                 console.log("All the data", response);
                 this.setState({latitude: response.data.results[0].geometry.location.lat})
@@ -249,12 +249,18 @@ class TripDetails extends Component{
                             <div className="center center-div">
                                 <a href src="https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi"> Forecast not showing? Try this chrome extension - https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi </a>
                             </div>
+                            
+                            <hr/>
+                            
+                            <div>
+                                <p> We have been having technical difficulties with the Geocode API which fetches the location for our forecast feature. Please bear with us while Google work's with us to repair this feature. </p>
+                            </div>
+
                         </div>
 
                         <div className="weather-bar">
                             {showWidget()}
                         </div>
-
                     </div>
                     
                     <hr />

@@ -41,8 +41,8 @@ class TripDetails extends Component{
     }
     
     getLatLong = ()=>{
-        // axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${this.state.searchCity},+${this.state.searchCountry}&key=AIzaSyDkgfr2SrXtnYOzlJ2srEoDGcGe13A5zfs`)
-        axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=Miami,+US&key=AIzaSyDkgfr2SrXtnYOzlJ2srEoDGcGe13A5zfs`)
+        axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${this.state.searchCity},+${this.state.searchCountry}&key=AIzaSyDkgfr2SrXtnYOzlJ2srEoDGcGe13A5zfs`)
+        // axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=Miami,+US&key=AIzaSyDkgfr2SrXtnYOzlJ2srEoDGcGe13A5zfs`)
             .then((response) =>{
                 console.log("All the data", response);
                 this.setState({latitude: response.data.results[0].geometry.location.lat})
@@ -56,14 +56,15 @@ class TripDetails extends Component{
     }
 
     getForecast = ()=>{
-        axios.get(`https://darksky.net/widget/default/${this.state.latitude},${this.state.longitude}/us12/en.js`)
-        // axios.get(`https://darksky.net/widget/default/25.7743,-80.1937/us12/en.js`)
+        // axios.get(`https://darksky.net/widget/default/${this.state.latitude},${this.state.longitude}/us12/en.js`)
+        axios.get(`https://darksky.net/widget/default/25.7743,-80.1937/us12/en.js`)
             .then((response) =>{
                 
                 // console.log("Darksky Widget", response);
-                this.setState({forecast: `https://darksky.net/widget/default/${this.state.latitude},${this.state.longitude}/us12/en.js`})
-                // console.log(`https://darksky.net/widget/default/${this.state.latitude},${this.state.longitude}/us12/en?domain=&quot;+encodeURIComponent(window.location.href)+&quot;&amp;auth=1565285343_4a83196ed81f764cbec954f01ac0b1c8&amp;`)
+                // this.setState({forecast: `https://darksky.net/widget/default/${this.state.latitude},${this.state.longitude}/us12/en.js`})
+                this.setState({forecast: `https://darksky.net/widget/default/25.7743,-80.1937/us12/en.js`})
                 console.log(this.state.forecast)
+                // console.log(`https://darksky.net/widget/default/${this.state.latitude},${this.state.longitude}/us12/en?domain=&quot;+encodeURIComponent(window.location.href)+&quot;&amp;auth=1565285343_4a83196ed81f764cbec954f01ac0b1c8&amp;`)
             })
             .catch((err) =>{
                 console.log(err)
@@ -246,14 +247,14 @@ class TripDetails extends Component{
 
                             <hr />
 
-                            <div className="center center-div">
+                            {/* <div className="center center-div">
                                 <a href src="https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi"> Forecast not showing? Try this chrome extension - https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi </a>
-                            </div>
+                            </div> */}
                             
                             <hr/>
                             
                             <div className="center center-div">
-                                <p> We have been having technical difficulties with the Geocode API which fetches the location for our forecast feature. Please bear with us while Google work's with us to repair this feature. </p>
+                                <a> We have been having technical difficulties with the Geocode API which fetches the location for our forecast feature. Please bear with us while Google work's with us to repair this feature. </a>
                             </div>
                         </div>
 

@@ -99,7 +99,7 @@ class TripDetails extends Component{
         })
     }
     deleteToiletries = (theID) =>{
-        axios.delete(`${process.env.REACT_APP_BASE}0/toiletries/`+theID)
+        axios.delete(`${process.env.REACT_APP_BASE}/toiletries/`+theID)
         .then(()=>{
             this.props.getData();
         })
@@ -247,9 +247,9 @@ class TripDetails extends Component{
 
                             <hr />
 
-                            {/* <div className="center center-div">
+                            <div className="center center-div">
                                 <a href src="https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi"> Forecast not showing? Try this chrome extension - https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi </a>
-                            </div> */}
+                            </div>
                             
                             <hr/>
                             

@@ -56,13 +56,12 @@ class TripDetails extends Component{
     }
 
     getForecast = ()=>{
-        // axios.get(`https://darksky.net/widget/default/${this.state.latitude},${this.state.longitude}/us12/en.js`)
-        axios.get(`https://darksky.net/widget/default/25.7743,-80.1937/us12/en.js`)
+        axios.get(`https://darksky.net/widget/default/${this.state.latitude},${this.state.longitude}/us12/en.js`)
+        // axios.get(`https://darksky.net/widget/default/25.7743,-80.1937/us12/en.js`)
             .then((response) =>{
-                
                 // console.log("Darksky Widget", response);
-                // this.setState({forecast: `https://darksky.net/widget/default/${this.state.latitude},${this.state.longitude}/us12/en.js`})
-                this.setState({forecast: `https://darksky.net/widget/default/25.7743,-80.1937/us12/en.js`})
+                this.setState({forecast: `https://darksky.net/widget/default/${this.state.latitude},${this.state.longitude}/us12/en.js`})
+                // this.setState({forecast: `https://darksky.net/widget/default/25.7743,-80.1937/us12/en.js`})
                 console.log(this.state.forecast)
                 // console.log(`https://darksky.net/widget/default/${this.state.latitude},${this.state.longitude}/us12/en?domain=&quot;+encodeURIComponent(window.location.href)+&quot;&amp;auth=1565285343_4a83196ed81f764cbec954f01ac0b1c8&amp;`)
             })

@@ -15,7 +15,7 @@ function Home(props){
                     <div className= "landing-page">
                         <div className= "landing-text">
                             <h2> Travelling is about experiencing new things, and being unprepared can mean missed opportunities. </h2>
-                            <h2> Trip-Packer helps you generate a customizable packing checklists to make sure you don’t miss a thing. </h2>
+                            <h2> Trip-Packer helps you generate customizable packing checklists to make sure you don’t miss a thing. </h2>
                         </div>
                         {/* <div >
                             <img src="/images/laoTzu-miles.jpg"/>

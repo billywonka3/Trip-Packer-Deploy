@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 import './tripdetails.css';
@@ -56,7 +57,7 @@ class TripDetails extends Component{
     }
 
     getForecast = ()=>{
-        axios.get(`https://darksky.net/widget/default/${this.state.latitude},${this.state.longitude}/us12/en.js`)
+        axios.get(`https://cors-anywhere.herokuapp.com/https://darksky.net/widget/default/${this.state.latitude},${this.state.longitude}/us12/en.js`)
         // axios.get(`https://darksky.net/widget/default/25.7743,-80.1937/us12/en.js`)
             .then((response) =>{
                 // console.log("Darksky Widget", response);
@@ -247,14 +248,16 @@ class TripDetails extends Component{
                             <hr />
 
                             <div className="center center-div">
-                                <a href src="https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi"> Forecast not showing? Try this chrome extension - https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi </a>
+                                <Link href src="https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi"> 
+                                    Forecast may not display due to heroku's CORS policy. If you encounter this problem, it can be remedied with this chrome extension - https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi 
+                                </Link>
                             </div>
                             
                             <hr/>
                             
-                            <div className="center center-div">
+                            {/* <div className="center center-div">
                                 <a> We have been having technical difficulties with the Geocode API which fetches the location for our forecast feature. Please bear with us while Google work's with us to repair this feature. </a>
-                            </div>
+                            </div> */}
                         </div>
 
                         <div className="weather-bar">

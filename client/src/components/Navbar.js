@@ -36,11 +36,11 @@ function Navbar(props){
                 </span>
             }
 
-            {/* {props.theUser && 
+            {props.theUser && 
                 <span>
                     <button onClick = {doTheLogout} > Log Out </button>
                 </span>
-            } */}
+            }
         </nav>
     )
 }

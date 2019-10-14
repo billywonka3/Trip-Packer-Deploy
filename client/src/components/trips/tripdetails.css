@@ -20,7 +20,7 @@
     position: relative;
     /* top: -15px; */
 }
-.lat-lng-search {
+#location-form input {
     z-index: 2;
 }
 .center {

@@ -238,6 +238,7 @@ class TripDetails extends Component{
                                     <div className="lat-lng-search">
                                         <form id="location-form">
                                             <input type="text" id="location-input" className="form-control form-control-lg" onChange={this.handleChangeCity} value={this.state.searchCity} placeholder="Enter the City"/>
+                                            <br/>
                                             <input type="text" id="location-input" className="form-control form-control-lg" onChange={this.handleChangeCountry} value={this.state.searchCountry}  placeholder="Enter the Country"/>
                                             {/* <br/>
                                             <button onClick = {()=>{this.getLatLong()}}

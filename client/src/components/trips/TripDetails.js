@@ -8,7 +8,6 @@ import AddClothing from '../items/AddClothing.js';
 import EditClothing from '../items/EditClothing.js';
 import AddToiletries from '../items/AddToiletries.js';
 import AddElectronics from '../items/AddElectronics.js';
-
 class TripDetails extends Component{
     constructor(props){
         super(props)
@@ -117,7 +116,6 @@ class TripDetails extends Component{
         })
     }
 
-
     render(){
         const allTheTrips = this.props.allTheTrips;
         const theID = this.props.match.params.theID;
@@ -129,15 +127,15 @@ class TripDetails extends Component{
         const showCoordinates  = () =>{
             return(
                 <div className= "coordinates">
-                    <p>Latitude  : {this.state.latitude}</p>
-                    <p>Longitude : {this.state.longitude}</p>
+                    <p> Latitude  {this.state.latitude}</p>
+                    <p> Longitude {this.state.longitude}</p>
                 </div>
             )
         }
 
         const showWidget = () => {
             return(
-                <iframe style={{overflow:'hidden'}}
+                <iframe style={ {overflow:'hidden'}} scrolling={"no"}
                     height= "420px"
                     width="400px"
                     src={this.state.forecast}>
@@ -214,24 +212,19 @@ class TripDetails extends Component{
             })  
         }
 
-
         if(this.props.ready)
             return(
-                <div className="morph-bar" style={{paddingTop: '20px'}}>
+                <div style={{paddingTop: '20px'}}>
                     <div className="details-text">
-                        <div className= "trip-details">
-                            <span>
-                                <h2> {theActualTrip.title} </h2>
-                                {/* <h5> {theActualTrip.description} </h5> */}
-                            </span>
-                        </div>
+                        <h2> {theActualTrip.title} </h2>
+                        {/* <h5> {theActualTrip.description} </h5> */}
                     </div>
 
                     <div className="top-window">
-                        <div className="leftside">
+                        <div className="left-side">
                             <div class="forecast-box">
                                 <div class="morph-bar">
-                                    <i> To get the Weather Forecast for your destination, </i>
+                                    <i> To get the Weather Forecast for your destination : </i>
                                 </div>
                                 <div className="details-text">
                                     <div className="lat-lng-search">
@@ -247,12 +240,6 @@ class TripDetails extends Component{
                                     {showCoordinates()}
                                 </div>                        
                             </div>
-                            <div>
-                                
-                            </div>
-                        </div>
-
-                        <div className="rightside">
                             <div className="forecast-bar">
                                 <div className="weather-bar">
                                     {showWidget()}
@@ -264,9 +251,10 @@ class TripDetails extends Component{
                                 </div> */}
                             </div>
                         </div>
+
                     </div>
 
-                    <div className="bottom-window">
+                    <div className="item-columns">
                         <div className= "item-column">
                             <h3>Clothing</h3>
                             <div>

@@ -7,22 +7,14 @@
 .details-text {
     display: flex;
     justify-content: center;
-    width: 600px;
-}
-.details-text div {
-    margin-right: 10px;
 }
 .trip-details {
     display: flex;
     flex-direction: column;
     text-align: center;
-    width: 50vw;
-    position: relative;
     /* top: -15px; */
 }
-/* #location-form * {
-    z-index: 2;
-} */
+
 .center {
     display: flex;
     justify-content: center;
@@ -36,10 +28,6 @@
     opacity: 0.85;
     font-size: 14px;
 }
-.top-window {
-    display: flex;
-    justify-content: center;
-}
 
 /* Geolocate for Latitude & Longitude */
 .lat-lng-search {
@@ -50,14 +38,16 @@
     font-size: 16px !important;
     position: relative;
     top: 5px;
+    margin-left: 20px;
 }
 
 /* Weather Forecast Bar */
-.forecast-borderbox{
+.left-side{
     display: flex;
     flex-direction: column;
-    align-items: center;    
-    border: double;
+    align-items: center;  
+    /* border: double; */
+    width: 600px;
 }
 .weather-bar {
     display: flex;
@@ -71,8 +61,18 @@
     background:white;
     opacity: 0.85;
 }
-iframe html{
+iframe {
+    width: 770px;
+    padding-right: 250px;
+    z-index: -1;
+    /* position: relative; */
+
+}
+/* iframe html{
     overflow: hidden !important;
+} */
+.rightside {
+    z-index: 2;
 }
 
 /* Item Columns for Clothing, Toiletries, Electronics, & Special */
@@ -84,20 +84,25 @@ p {
     margin-block-start: 5px;
     margin-block-end: 5px;
 }
-.bottom-window {
+.top-window {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.item-columns {
     display: flex;
     margin: 15px 50px;
     justify-content: center;
     flex-wrap: wrap;
 }
-.bottom-window h3 {
+.item-columns h3 {
     display: flex;
     justify-content: center;
     align-items: center;
     overflow-wrap: break-word;
     word-wrap: break-word;
 }
-.bottom-window > div {
+.item-columns > div {
     display: flex;
     flex-direction: column;
     /* justify-content: space-evenly; */

@@ -106,7 +106,7 @@ class App extends React.Component {
           />
         }
         
-        <Route exact path="/login" render ={()=> 
+        <Route exact path="/" render ={()=> 
           <Home
             
           />}

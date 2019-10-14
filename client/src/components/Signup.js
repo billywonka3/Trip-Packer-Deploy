@@ -21,7 +21,7 @@ class Signup extends Component {
     const pWord = this.state.passwordInput;
     
     // this.service.signup(uName, pWord)
-    axios.post('http://localhost:5000/api/auth/signup', {
+    axios.post(`${process.env.REACT_APP_BASE}/auth/signup`, {
       username: uName,
       password: pWord
     }, {withCredentials: true})

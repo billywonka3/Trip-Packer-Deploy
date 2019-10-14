@@ -20,9 +20,9 @@
     position: relative;
     /* top: -15px; */
 }
-#location-form * {
+/* #location-form * {
     z-index: 2;
-}
+} */
 .center {
     display: flex;
     justify-content: center;
@@ -35,6 +35,10 @@
     background:white;
     opacity: 0.85;
     font-size: 14px;
+}
+.top-window {
+    display: flex;
+    justify-content: center;
 }
 
 /* Geolocate for Latitude & Longitude */
@@ -80,20 +84,20 @@ p {
     margin-block-start: 5px;
     margin-block-end: 5px;
 }
-.item-columns {
+.bottom-window {
     display: flex;
     margin: 15px 50px;
     justify-content: center;
     flex-wrap: wrap;
 }
-.item-columns h3 {
+.bottom-window h3 {
     display: flex;
     justify-content: center;
     align-items: center;
     overflow-wrap: break-word;
     word-wrap: break-word;
 }
-.item-columns > div {
+.bottom-window > div {
     display: flex;
     flex-direction: column;
     /* justify-content: space-evenly; */

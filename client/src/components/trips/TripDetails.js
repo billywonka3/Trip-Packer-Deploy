@@ -217,19 +217,18 @@ class TripDetails extends Component{
 
         if(this.props.ready)
             return(
-                <div style={{paddingTop: '20px'}}>
-                    
-                    <div className="morph-bar">
+                <div className="morph-bar" style={{paddingTop: '20px'}}>
+                    <div className="details-text">
+                        <div className= "trip-details">
+                            <span>
+                                <h2> {theActualTrip.title} </h2>
+                                {/* <h5> {theActualTrip.description} </h5> */}
+                            </span>
+                        </div>
+                    </div>
+
+                    <div className="top-window">
                         <div className="leftside">
-                            <div className="details-text">
-                                <div className= "trip-details">
-                                    <span>
-                                        <h2> {theActualTrip.title} </h2>
-                                        <h5> {theActualTrip.description} </h5>
-                                    </span>
-                                </div>
-                            </div>
-                            
                             <div class="forecast-box">
                                 <div class="morph-bar">
                                     <i> To get the Weather Forecast for your destination, </i>
@@ -246,10 +245,14 @@ class TripDetails extends Component{
                                         </form>
                                     </div>
                                     {showCoordinates()}
-                                </div>
-                                <div><br/><br/><br/></div>                         
+                                </div>                        
                             </div>
-                            <span><br/></span>
+                            <div>
+                                
+                            </div>
+                        </div>
+
+                        <div className="rightside">
                             <div className="forecast-bar">
                                 <div className="weather-bar">
                                     {showWidget()}
@@ -263,67 +266,63 @@ class TripDetails extends Component{
                         </div>
                     </div>
 
-                    <div className="rightside">
-                        <div className="item-columns">
-                            <div className= "item-column">
-                                <h3>Clothing</h3>
-                                <div>
-                                    <hr />
-                                    {theActualTrip.clothing.length > 0 && 
-                                        <ul className= "list-format">
-                                            {showClothing()}
-                                        </ul>                           
-                                    }
-                                    <hr /> 
-                                </div>     
-                                <div className="add-item"> 
-                                    <AddClothing 
-                                        theTripToAddClothingTo = {theActualTrip._id} 
-                                        getData = {this.props.getData}
-                                    />
-                                </div>
+                    <div className="bottom-window">
+                        <div className= "item-column">
+                            <h3>Clothing</h3>
+                            <div>
+                                <hr />
+                                {theActualTrip.clothing.length > 0 && 
+                                    <ul className= "list-format">
+                                        {showClothing()}
+                                    </ul>                           
+                                }
+                                <hr /> 
+                            </div>     
+                            <div className="add-item"> 
+                                <AddClothing 
+                                    theTripToAddClothingTo = {theActualTrip._id} 
+                                    getData = {this.props.getData}
+                                />
                             </div>
-
-                            <div className= "item-column">
-                                <h3>Toiletries</h3>
-                                <div>
-                                    <hr />
-                                    {theActualTrip.toiletries.length > 0 && 
-                                        <ul>
-                                            {showToiletries()}
-                                        </ul>                           
-                                    }
-                                    <hr /> 
-                                </div>
-                                <div className= "add-item">
-                                    <AddToiletries 
-                                        theTripToAddToiletriesTo = {theActualTrip._id} 
-                                        getData = {this.props.getData}
-                                    />
-                                </div>
+                        </div>
+                        <div className= "item-column">
+                            <h3>Toiletries</h3>
+                            <div>
+                                <hr />
+                                {theActualTrip.toiletries.length > 0 && 
+                                    <ul>
+                                        {showToiletries()}
+                                    </ul>                           
+                                }
+                                <hr /> 
                             </div>
-
-                            <div className= "item-column">
-                                <h3>Electronics</h3>
-                                <div>
-                                    <hr /> 
-                                    {theActualTrip.electronics.length > 0 && 
-                                        <ul>
-                                            {showElectronics()}
-                                        </ul>                           
-                                    }
-                                    <hr /> 
-                                </div> 
-                                <div className= "add-item">
-                                    <AddElectronics 
-                                        theTripToAddElectronicsTo = {theActualTrip._id} 
-                                        getData = {this.props.getData}
-                                    />
-                                </div>
+                            <div className= "add-item">
+                                <AddToiletries 
+                                    theTripToAddToiletriesTo = {theActualTrip._id} 
+                                    getData = {this.props.getData}
+                                />
+                            </div>
+                        </div>
+                        <div className= "item-column">
+                            <h3>Electronics</h3>
+                            <div>
+                                <hr /> 
+                                {theActualTrip.electronics.length > 0 && 
+                                    <ul>
+                                        {showElectronics()}
+                                    </ul>                           
+                                }
+                                <hr /> 
+                            </div> 
+                            <div className= "add-item">
+                                <AddElectronics 
+                                    theTripToAddElectronicsTo = {theActualTrip._id} 
+                                    getData = {this.props.getData}
+                                />
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
             )
         else // Loading Icon & Msg

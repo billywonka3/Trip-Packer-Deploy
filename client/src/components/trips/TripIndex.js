@@ -25,7 +25,7 @@ class TripIndex extends Component {
     }
 
     deleteTrip = (idOfTrip) =>{
-        axios.delete(`http://localhost:5000/api/trips/${idOfTrip}`)
+        axios.delete(`${process.env.REACT_APP_BASE}/trips/${idOfTrip}`)
         .then(()=>{
             this.props.getData();
         })

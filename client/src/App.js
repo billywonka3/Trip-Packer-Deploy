@@ -113,7 +113,7 @@ class App extends React.Component {
         />
 
         <Switch>
-          <Route exact path="/api/trips" render ={(props)=> 
+          <Route exact path="/trips" render ={(props)=> 
             <TripIndex
               {...props} 
               allTheTrips ={this.state.listOfTrips}
@@ -123,7 +123,7 @@ class App extends React.Component {
             />}
           />
 
-          <Route exact path="/api/trips/:theID" render ={(props)=> 
+          <Route exact path="/trips/:theID" render ={(props)=> 
             <TripDetails
               {...props} 
               allTheTrips ={this.state.listOfTrips}

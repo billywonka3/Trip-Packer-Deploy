@@ -37,9 +37,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-
-
-      
+// Express View engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
@@ -50,7 +48,6 @@ app.use(session({
   resave: true,
   saveUninitialized: true
 }));
-
 
 // default value for title local
 // app.locals.title = 'Trip-Packer : Take the First Step on a new Journey';
@@ -85,6 +82,12 @@ app.use(cors({
 // ================ ROUTES ==================
 const userRoutes = require('./routes/userRoutes');
 app.use('/api/auth', userRoutes);
+
+const signupRoutes = require('./routes/userRoutes');
+app.use('/api/signup', userRoutes);
+
+const loginRoutes = require('./routes/userRoutes');
+app.use('/api/login', userRoutes);
 
 const tripRoutes = require('./routes/tripRoutes');
 app.use('/api/trips', tripRoutes);

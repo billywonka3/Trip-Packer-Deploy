@@ -135,6 +135,15 @@ class TripDetails extends Component{
             )
         }
 
+        const showWidget = () => {
+            return(
+                <iframe style={{overflow:'hidden'}}
+                    height= "420px"
+                    width="400px"
+                    src={this.state.forecast}>
+                </iframe>
+            )
+        }
         // const showForecast = () => {    
         //     return(
         //         <div>
@@ -205,16 +214,6 @@ class TripDetails extends Component{
             })  
         }
 
-        const showWidget = () => {
-            return(
-                <iframe style={{overflow:'hidden'}}
-                    height= "600px"
-                    width="600px"
-                    src={this.state.forecast}>
-                </iframe>
-            )
-        }
-
 
         if(this.props.ready)
             return(
@@ -245,27 +244,19 @@ class TripDetails extends Component{
                                 {showCoordinates()}
                             </div>
 
-                            <hr />
-
-                            <div className="center center-div">
+                            {/* <div className="center center-div">
                                 <Link href src="https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi"> 
                                     Forecast may not display due to heroku's CORS policy. If you encounter this problem, it can be remedied with this chrome extension - https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi 
                                 </Link>
-                            </div>
-                            
-                            <hr/>
-                            
-                            {/* <div className="center center-div">
-                                <a> We have been having technical difficulties with the Geocode API which fetches the location for our forecast feature. Please bear with us while Google work's with us to repair this feature. </a>
                             </div> */}
-                        </div>
-
-                        <div className="weather-bar">
-                            {showWidget()}
+                        
+                            <div className="forecast-bar">
+                                <div className="weather-bar">
+                                    {showWidget()}
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    
-                    <hr />
 
                     <div className="item-columns">
                         <div className= "item-column">

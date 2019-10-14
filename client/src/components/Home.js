@@ -9,7 +9,7 @@ function Home(props){
                     <div className= "landing-page">
                         <div className= "landing-text">
                             <h1> Trip-Packer </h1>
-                            <h4> Customiazable Lists for Packing your Bags & Prepping your Home </h4>
+                            <h5> Customizable Lists for Packing your Bags & Prepping your Home </h5>
                         </div>
                         <div>
                             

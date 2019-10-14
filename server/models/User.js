@@ -14,9 +14,6 @@ const userSchema = new Schema({
   myElectronics: {
     type: [{type: Schema.Types.ObjectId, ref: 'Electronics'}]
   },
-  myHousehold: {
-    type: [{type: Schema.Types.ObjectId, ref: 'Household'}]
-  },
 });
 
 const User = mongoose.model('User', userSchema);

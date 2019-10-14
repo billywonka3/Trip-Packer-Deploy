@@ -20,7 +20,7 @@
     position: relative;
     /* top: -15px; */
 }
-.location-form {
+#location-form {
     z-index: 2;
 }
 .center {

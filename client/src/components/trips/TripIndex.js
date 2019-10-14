@@ -25,7 +25,7 @@ class TripIndex extends Component {
     }
 
     deleteTrip = (idOfTrip) =>{
-        axios.delete(`${process.env.REACT_APP_BASE}/trips/${idOfTrip}`)
+        axios.delete(`http://localhost:5000/api/trips/${idOfTrip}`)
         .then(()=>{
             this.props.getData();
         })
@@ -48,7 +48,7 @@ class TripIndex extends Component {
             if(this.state.editing !== index){
                 return (
                     <div key={trip._id} className="trip-box1">
-                        <Link to={`/api/trips/${trip._id}`}>
+                        <Link to={`/trips/${trip._id}`}>
                             <h3>{trip.title}</h3>
                         </Link>
                         <p style={{maxWidth: '400px'}}> {trip.description} </p>
@@ -73,10 +73,13 @@ class TripIndex extends Component {
         if(this.props.ready)
             return(
                 <div className="trip-main">
-                    <div className="trip-column">
-                        {this.showTrips()}
-                        <div className="trip-box2">
-                            <AddTrip getData={this.props.getData}/>
+                    <div>
+                        <div className="trip-column">
+                            {this.showTrips()}
+                            <div className="trip-box2">
+                                <h4><i>Let's start by creating a Trip</i></h4>
+                                <AddTrip getData={this.props.getData}/>
+                            </div>
                         </div>
                     </div>
                 </div>

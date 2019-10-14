@@ -21,19 +21,20 @@
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
 }
-/* .tripbox1 p {
-  width: 420px;
-} */
 .trip-box2 {
   margin: 10px;
   border: solid;
   width: 325px;
   padding: 10px 15px 15px 20px;
-  background:white;
+  background:black;
+  color: white;
   opacity: 0.8;
   border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
+}
+.trip-box2 i {
+  color: teal;
 }
 textarea {
   height: 10vh;
@@ -43,3 +44,36 @@ textarea {
     -moz-box-sizing: border-box;
 }
 
+/*------------------ Profile Page ------------------*/
+/* .profile-div {
+    padding: 0 100px;
+    width: 50%;
+  }
+  .white-input {
+    color: white;
+  }
+  .save-btn {
+    color: black;
+  }
+  #profile-buttons {
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    display: flex;
+  }
+  .main-btn {
+    margin-right: 100px;
+  }
+  
+  #custom-section{
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    margin : 75px 0 100px 300px;
+  }
+  .rightside form {
+    color: white;
+  }
+  .rightside div{
+      margin: 8px;
+  } */

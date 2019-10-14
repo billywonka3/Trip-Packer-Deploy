@@ -248,6 +248,7 @@ class TripDetails extends Component{
                                     {showCoordinates()}
                                 </div>                         
                             </div>
+                            <span><br/></span>
                             <div className="forecast-bar">
                                 <div className="weather-bar">
                                     {showWidget()}

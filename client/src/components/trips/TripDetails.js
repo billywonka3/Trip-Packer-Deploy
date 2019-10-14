@@ -246,7 +246,8 @@ class TripDetails extends Component{
                                         </form>
                                     </div>
                                     {showCoordinates()}
-                                </div>                         
+                                </div>
+                                <div><br/><br/><br/></div>                         
                             </div>
                             <span><br/></span>
                             <div className="forecast-bar">

@@ -11,9 +11,28 @@ function Home(props){
                             <h1> Trip-Packer </h1>
                             <h3> Customizable Lists for Packing your Bags & Prepping your Home </h3>
                         </div>
-                        <div>
-                            
-                        </div>
+
+                        {/* <div className="image-row landing-wrap">
+                            <div className="circle-divs">
+                            <div className="image-cropper"> 
+                                <img className="ergo-circle" src="images/superman_spine.jpg"/>>
+                            </div>
+                            <p> Ergonomics </p> 
+                            </div>
+                            <div className="circle-divs">
+                            <div className="image-cropper"> 
+                                <img className="pressure-points" src="images/Liu-bu-pressure-points.gif"/>> 
+                            </div>
+                            <p> Pressure-point Massage </p> 
+                            </div>
+                            <div className="circle-divs">
+                            <div className="image-cropper"> 
+                                <img className="yoga-type" src="images/deskercise.png"/>> 
+                            </div>
+                            <p> Stretching </p>
+                            </div>
+                        </div> */}
+
                     </div>
                     
                     {/* <div className="img-stripe">

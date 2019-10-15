@@ -3,7 +3,6 @@ const Schema   = mongoose.Schema;
 
 const householdSchema = new Schema({
   name: String,
-  // weight: Number,
 });
 
 const Household = mongoose.model('Household', householdSchema);

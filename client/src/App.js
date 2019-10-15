@@ -94,18 +94,18 @@ class App extends React.Component {
           getUser = {this.getCurrentlyLoggedInUser}
         />
 
-        {this.state.signupShowing && 
-          <Signup getUser = {this.getCurrentlyLoggedInUser}
-            toggleForm = {this.toggleForm}
-          />
-        }
-
         {this.state.loginShowing && 
           <Login getUser = {this.getCurrentlyLoggedInUser}
             toggleForm = {this.toggleForm}
           />
         }
         
+        {this.state.signupShowing && 
+          <Signup getUser = {this.getCurrentlyLoggedInUser}
+            toggleForm = {this.toggleForm}
+          />
+        }
+
         <Route exact path="/" render ={()=> 
           <Home
             

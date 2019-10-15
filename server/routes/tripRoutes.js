@@ -16,26 +16,20 @@ router.get('/', (req, res, next) => {
   .then((allTheTrips)=>{
     res.json(allTheTrips);
   })
-
   .catch((err)=>{
     res.json(err);
   })
-
 });
 
 
 router.get('/details/:id', (req, res, next)=>{
-
   Trip.findById(req.params.id).populate('clothing').populate('toiletries').populate('electronics').populate('household')
-
   .then((singleTrip)=>{
     res.json(singleTrip);
   })
-
   .catch((err)=>{
     res.json(err);
   })
-
 })
 
 
@@ -57,11 +51,11 @@ router.post('/', (req, res, next)=>{
   hygieneB.save( (err)=>{ if(err){console.log(err);} } )
   let hygieneC = new Toiletries ({name: 'Floss'})
   hygieneC.save( (err)=>{ if(err){console.log(err);} } )
-  let hygieneD = new Toiletries ({name: 'Shampoo'})
+  let hygieneD = new Toiletries ({name: 'Razor'})
   hygieneD.save( (err)=>{ if(err){console.log(err);} } )
-  let hygieneE = new Toiletries ({name: 'Nail Clipper'})
+  let hygieneE = new Toiletries ({name: 'Tweezers'})
   hygieneE.save( (err)=>{ if(err){console.log(err);} } )
-  let hygieneF = new Toiletries ({name: 'Tweezers'})
+  let hygieneF = new Toiletries ({name: 'Nail Clipper'})
   hygieneF.save( (err)=>{ if(err){console.log(err);} } )
   let hygieneG = new Toiletries ({name: 'Q-tips or Cerumen Spoon'})
   hygieneG.save( (err)=>{ if(err){console.log(err);} } )
@@ -71,6 +65,8 @@ router.post('/', (req, res, next)=>{
   hygieneI.save( (err)=>{ if(err){console.log(err);} } )
   let hygieneJ = new Toiletries ({name: 'Deodorant'})
   hygieneJ.save( (err)=>{ if(err){console.log(err);} } )
+  let hygieneK = new Toiletries ({name: 'Shampoo & Conditioner'})
+  hygieneK.save( (err)=>{ if(err){console.log(err);} } )
 
   let elecA = new Electronics ({name: 'Laptop & Charger'})
   elecA.save( (err)=>{ if(err){console.log(err);} } )
@@ -106,7 +102,7 @@ router.post('/', (req, res, next)=>{
     title: req.body.theTitle,
     description: req.body.theDescription,
     clothing: [clothA._id, clothB._id, clothC._id, clothD._id, ],
-    toiletries: [hygieneA._id, hygieneB._id, hygieneC._id, hygieneD._id, hygieneE._id, hygieneF._id, hygieneG._id, hygieneH._id, hygieneI._id, hygieneJ._id, ],
+    toiletries: [hygieneA._id, hygieneB._id, hygieneC._id, hygieneD._id, hygieneE._id, hygieneF._id, hygieneG._id, hygieneH._id, hygieneI._id, hygieneJ._id, hygieneK._id, ],
     electronics: [elecA._id, elecB._id, elecC._id, elecD._id, elecE._id, ],
     household: [houseA._id, houseB._id, houseC._id, houseD._id, houseE._id, houseF._id, houseG._id, houseH._id, ],
     // user.myClothing: [],

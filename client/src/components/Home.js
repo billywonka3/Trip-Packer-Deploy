@@ -9,21 +9,24 @@ function Home(props){
                     <div className= "landing-page">
                         <div className= "landing-text">
                             <h1> Trip-Packer </h1>
-                            <h5> Customizable Lists for Packing your Bags & Prepping your Home </h5>
+                            <h3> Customizable Lists for Packing your Bags & Prepping your Home </h3>
                         </div>
                         <div>
                             
                         </div>
                     </div>
                     
-                    <div className="img-stripe">
+                    {/* <div className="img-stripe">
                         <img src="/images/laotzu-1000-miles.jpg"/>
                         <img src="/images/backgrounds/maldives.jpeg"/>
                         <img src="/images/backgrounds/kyoto-yakasa-pagoda.jpg"/>
                         <img src="/images/backgrounds/Torii-Gate1.jpg"/>
                         <img src="/images/backgrounds/Fushimi Inari1.jpg"/>
                         <img src="/images/backgrounds/broken-bay.jpg"/>
-                    </div>
+                    </div> */}
+
+                    {/* <div> <img src="/images/laotzu-1000-miles.jpg"/> </div> */}
+
                 </div>
             }
 

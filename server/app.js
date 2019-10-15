@@ -101,6 +101,9 @@ app.use('/api/toiletries', toiletriesRoutes);
 const electronicsRoutes = require('./routes/electronicsRoutes');
 app.use('/api/electronics', electronicsRoutes);
 
+const householdRoutes = require('./routes/householdRoutes');
+app.use('/api/household', householdRoutes);
+
 // ==========================================
 
 app.use ((req, res, next) => {

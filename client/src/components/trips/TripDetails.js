@@ -8,6 +8,8 @@ import AddClothing from '../items/AddClothing.js';
 import EditClothing from '../items/EditClothing.js';
 import AddToiletries from '../items/AddToiletries.js';
 import AddElectronics from '../items/AddElectronics.js';
+import AddHousehold from '../items/AddHousehold.js';
+
 class TripDetails extends Component{
     constructor(props){
         super(props)
@@ -90,6 +92,7 @@ class TripDetails extends Component{
 
     deleteClothing = (theID) =>{
         axios.delete(`${process.env.REACT_APP_BASE}/clothing/`+theID)
+        axios.delete(`http://localhost:5000/api/clothing/`+theID)
         .then(()=>{
             this.props.getData();
         })
@@ -99,6 +102,7 @@ class TripDetails extends Component{
     }
     deleteToiletries = (theID) =>{
         axios.delete(`${process.env.REACT_APP_BASE}/toiletries/`+theID)
+        axios.delete(`http://localhost:5000/api/toiletries/`+theID)
         .then(()=>{
             this.props.getData();
         })
@@ -108,6 +112,17 @@ class TripDetails extends Component{
     }
     deleteElectronics = (theID) =>{
         axios.delete(`${process.env.REACT_APP_BASE}/electronics/`+theID)
+        axios.delete(`http://localhost:5000/api/electronics/`+theID)
+        .then(() =>{
+            this.props.getData();
+        })
+        .catch((err) =>{
+            console.log(err)
+        })
+    }
+    deleteHousehold = (theID) =>{
+        axios.delete(`${process.env.REACT_APP_BASE}/household/`+theID)
+        axios.delete(`http://localhost:5000/api/household/`+theID)
         .then(() =>{
             this.props.getData();
         })
@@ -212,6 +227,23 @@ class TripDetails extends Component{
             })  
         }
 
+        const showHousehold = () =>{
+            return theActualTrip.household.map((eachHousehold)=>{
+                // console.log(eachHousehold)
+                return ( <li key={eachHousehold._id}>
+                            <div className="list-and-btn">
+                                <div>
+                                    <p>{eachHousehold.name}</p>
+                                </div>
+                                <p>
+                                    <button className="delete-btn" onClick = {()=>{this.deleteHousehold(eachHousehold._id)}}>Delete</button>
+                                </p>
+                            </div>
+                        </li>
+                )
+            })  
+        }
+
         if(this.props.ready)
             return(
                 <div style={{paddingTop: '20px'}}>
@@ -252,6 +284,26 @@ class TripDetails extends Component{
                             </div>
                         </div>
 
+                        <div className="right-side item-columns">
+                            <div className="item-column">
+                                <h3>Home Prep Tasks</h3>
+                                <div>
+                                    <hr/>
+                                    {theActualTrip.household.length > 0 && 
+                                        <ul className= "list-format">
+                                            {showHousehold()}
+                                        </ul>                           
+                                    }
+                                    <hr /> 
+                                </div>     
+                                <div className="add-item"> 
+                                    <AddHousehold
+                                        theTripToAddHouseholdTo = {theActualTrip._id} 
+                                        getData = {this.props.getData}
+                                    />
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div className="item-columns">

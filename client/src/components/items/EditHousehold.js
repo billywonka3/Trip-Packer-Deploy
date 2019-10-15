@@ -15,7 +15,8 @@ class EditHousehold extends Component {
 
     event.preventDefault();
 
-    axios.post(`http://localhost:5000/api/household/update/${this.props.theHousehold._id}`,
+    axios.post(`${process.env.REACT_APP_BASE}/household/update/${this.props.theHousehold._id}`,
+    // axios.post(`http://localhost:5000/api/household/update/${this.props.theHousehold._id}`,
         { theName: name,
           // theweight: weight,
          })

@@ -92,7 +92,7 @@ class TripDetails extends Component{
 
     deleteClothing = (theID) =>{
         axios.delete(`${process.env.REACT_APP_BASE}/clothing/`+theID)
-        axios.delete(`http://localhost:5000/api/clothing/`+theID)
+        // axios.delete(`http://localhost:5000/api/clothing/`+theID)
         .then(()=>{
             this.props.getData();
         })
@@ -102,7 +102,7 @@ class TripDetails extends Component{
     }
     deleteToiletries = (theID) =>{
         axios.delete(`${process.env.REACT_APP_BASE}/toiletries/`+theID)
-        axios.delete(`http://localhost:5000/api/toiletries/`+theID)
+        // axios.delete(`http://localhost:5000/api/toiletries/`+theID)
         .then(()=>{
             this.props.getData();
         })
@@ -112,7 +112,7 @@ class TripDetails extends Component{
     }
     deleteElectronics = (theID) =>{
         axios.delete(`${process.env.REACT_APP_BASE}/electronics/`+theID)
-        axios.delete(`http://localhost:5000/api/electronics/`+theID)
+        // axios.delete(`http://localhost:5000/api/electronics/`+theID)
         .then(() =>{
             this.props.getData();
         })
@@ -122,7 +122,7 @@ class TripDetails extends Component{
     }
     deleteHousehold = (theID) =>{
         axios.delete(`${process.env.REACT_APP_BASE}/household/`+theID)
-        axios.delete(`http://localhost:5000/api/household/`+theID)
+        // axios.delete(`http://localhost:5000/api/household/`+theID)
         .then(() =>{
             this.props.getData();
         })

@@ -284,25 +284,8 @@ class TripDetails extends Component{
                             </div>
                         </div>
 
-                        <div className="right-side item-columns">
-                            <div className="item-column">
-                                <h3>Home Prep Tasks</h3>
-                                <div>
-                                    <hr/>
-                                    {theActualTrip.household.length > 0 && 
-                                        <ul className= "list-format">
-                                            {showHousehold()}
-                                        </ul>                           
-                                    }
-                                    <hr /> 
-                                </div>     
-                                <div className="add-item"> 
-                                    <AddHousehold
-                                        theTripToAddHouseholdTo = {theActualTrip._id} 
-                                        getData = {this.props.getData}
-                                    />
-                                </div>
-                            </div>
+                        <div className="right-side">
+                            
                         </div>
                     </div>
 
@@ -326,24 +309,6 @@ class TripDetails extends Component{
                             </div>
                         </div>
                         <div className= "item-column">
-                            <h3>Toiletries</h3>
-                            <div>
-                                <hr />
-                                {theActualTrip.toiletries.length > 0 && 
-                                    <ul>
-                                        {showToiletries()}
-                                    </ul>                           
-                                }
-                                <hr /> 
-                            </div>
-                            <div className= "add-item">
-                                <AddToiletries 
-                                    theTripToAddToiletriesTo = {theActualTrip._id} 
-                                    getData = {this.props.getData}
-                                />
-                            </div>
-                        </div>
-                        <div className= "item-column">
                             <h3>Electronics</h3>
                             <div>
                                 <hr /> 
@@ -361,6 +326,45 @@ class TripDetails extends Component{
                                 />
                             </div>
                         </div>
+                        <div className= "item-column">
+                            <h3>Toiletries</h3>
+                            <div>
+                                <hr />
+                                {theActualTrip.toiletries.length > 0 && 
+                                    <ul>
+                                        {showToiletries()}
+                                    </ul>                           
+                                }
+                                <hr /> 
+                            </div>
+                            <div className= "add-item">
+                                <AddToiletries 
+                                    theTripToAddToiletriesTo = {theActualTrip._id} 
+                                    getData = {this.props.getData}
+                                />
+                            </div>
+                        </div>
+                        <div className="home-prep item-columns">
+                            <div className="item-column">
+                                <h3>Home-Prep Tasks</h3>
+                                <div>
+                                    <hr/>
+                                    {theActualTrip.household.length > 0 && 
+                                        <ul className= "list-format">
+                                            {showHousehold()}
+                                        </ul>                           
+                                    }
+                                    <hr /> 
+                                </div>     
+                                <div className="add-item"> 
+                                    <AddHousehold
+                                        theTripToAddHouseholdTo = {theActualTrip._id} 
+                                        getData = {this.props.getData}
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
 
                 </div>

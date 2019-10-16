@@ -79,7 +79,19 @@ iframe {
 
 /* Right-side Carousel */
 .right-side {
-
+    --slider-height-percentage: 60%;
+    --slider-transition-duration: 700ms;
+    --organic-arrow-thickness: 4px;
+    --organic-arrow-border-radius: 0px;
+    --organic-arrow-height: 40px;
+    --organic-arrow-color: #d5d5d5;
+    --control-button-width: 10%;
+    --control-button-height: 25%;
+    --control-button-background: transparent;
+    --control-bullet-color: #fafafa;
+    --control-bullet-active-color: #d5d5d5;
+    --loader-bar-color: #851515;
+    --loader-bar-height: 6px;
 }
 
 /* Item Columns for Clothing, Toiletries, Electronics, & Special */
@@ -108,23 +120,30 @@ p {
     align-items: center;
     overflow-wrap: break-word;
     word-wrap: break-word;
+    margin: 12px 0 5px;
 }
 .item-columns > div {
     display: flex;
     flex-direction: column;
     /* justify-content: space-evenly; */
-
     margin: 0 10px 10px 0;
     width: 350px;
     overflow-wrap: break-word;
     word-wrap: break-word;
 }
 .item-column {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
     background:white;
     opacity: 0.8;
-    border-radius: 20px;
-      -webkit-border-radius: 20px;
-      -moz-border-radius: 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.item-column:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 .home-prep * {
     background-color: black;

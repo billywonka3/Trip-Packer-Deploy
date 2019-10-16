@@ -291,7 +291,7 @@ class TripDetails extends Component{
 
                     <div className="item-columns">
                         <div className= "item-column">
-                            <h3>Clothing</h3>
+                            <h3><u>Clothing</u></h3>
                             <div>
                                 <hr />
                                 {theActualTrip.clothing.length > 0 && 
@@ -309,7 +309,7 @@ class TripDetails extends Component{
                             </div>
                         </div>
                         <div className= "item-column">
-                            <h3>Electronics</h3>
+                            <h3><u>Electronics</u></h3>
                             <div>
                                 <hr /> 
                                 {theActualTrip.electronics.length > 0 && 
@@ -327,7 +327,7 @@ class TripDetails extends Component{
                             </div>
                         </div>
                         <div className= "item-column">
-                            <h3>Toiletries</h3>
+                            <h3><u>Hygiene</u></h3>
                             <div>
                                 <hr />
                                 {theActualTrip.toiletries.length > 0 && 
@@ -346,7 +346,7 @@ class TripDetails extends Component{
                         </div>
                         <div className="home-prep item-columns">
                             <div className="item-column">
-                                <h3>Home-Prep Tasks</h3>
+                                <h3><u>Home-Prep Tasks</u></h3>
                                 <div>
                                     <hr/>
                                     {theActualTrip.household.length > 0 && 
@@ -364,7 +364,6 @@ class TripDetails extends Component{
                                 </div>
                             </div>
                         </div>
-                        
                     </div>
 
                 </div>

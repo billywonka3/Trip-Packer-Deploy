@@ -5,10 +5,17 @@ nav {
   background: black;
   color: white;
   height: 35px;
-  padding-top: 5px;
 }
 nav > div > button {
   font-size: 18px;
+  margin: 3.5px 20px;
+  background: purple;
+  color: white;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
 } 
 .centralMSG {
   margin: 5px 20px;
@@ -16,6 +23,7 @@ nav > div > button {
 .logout-btn {
   position: absolute;
   right: 10px;
+  top: 3.5px;
 }
 .trip-tab link {
   color: #00B7FF;
@@ -88,7 +96,7 @@ body {
   flex-wrap: wrap;
   margin-top: 220px;
   margin-bottom: 30px;
-
+npm install --save react-awesome-slider
 }
 .img-stripe img {
   height: 250px;

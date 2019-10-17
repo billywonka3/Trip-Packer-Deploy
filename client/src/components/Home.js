@@ -5,38 +5,45 @@ function Home(props){
     return (
         <body>
             {!props.theUser && 
-                <div>
                     <div className= "landing-page">
                         <div className= "landing-text">
                             <h1> Trip-Packer </h1>
                             <h3> Customizable Lists for Packing your Bags & Prepping your Home </h3>
                         </div>
-
-                        {/* <div className="image-row landing-wrap">
-                            <div className="circle-divs">
-                            <div className="image-cropper"> 
-                                <img className="ergo-circle" src="images/superman_spine.jpg"/>>
-                            </div>
-                            <p> Ergonomics </p> 
-                            </div>
-                            <div className="circle-divs">
-                            <div className="image-cropper"> 
-                                <img className="pressure-points" src="images/Liu-bu-pressure-points.gif"/>> 
-                            </div>
-                            <p> Pressure-point Massage </p> 
-                            </div>
-                            <div className="circle-divs">
-                            <div className="image-cropper"> 
-                                <img className="yoga-type" src="images/deskercise.png"/>> 
-                            </div>
-                            <p> Stretching </p>
-                            </div>
-                        </div> */}
-
                     </div>
-                    
+            }
+
+            {!props.theUser && 
+                    <div className="image-row landing-wrap">
+                        <div className="circle-divs">
+                            <div className="image-cropper"> 
+                                <img className="ergo-circle" src="images/plane-trip.jpeg"/>>
+                            </div>
+                            <p> Create a Trip </p> 
+                        </div>
+                        <div className="circle-divs">
+                            <div className="image-cropper"> 
+                                <img className="ergo-circle" src="images/check-weather-1.jpg"/>> 
+                            </div>
+                            <p> Check the Weather </p> 
+                        </div>
+                        <div className="circle-divs">
+                            <div className="image-cropper"> 
+                                <img className="ergo-circle" src="images/pack-bags1.jpg"/>> 
+                            </div>
+                            <p> Pack Your Bags </p>
+                        </div>
+                        <div className="circle-divs">
+                            <div className="image-cropper"> 
+                                <img className="ergo-circle" src="images/Preparing-Your-Home-for-Your-Trip.jpg"/>> 
+                            </div>
+                            <p> Prep your Home </p>
+                        </div>
+                     </div>
+            }
+
                     {/* <div className="img-stripe">
-                        <img src="/images/laotzu-1000-miles.jpg"/>
+                        <showHousehold src="/images/laotzu-1000-miles.jpg"/>
                         <img src="/images/backgrounds/maldives.jpeg"/>
                         <img src="/images/backgrounds/kyoto-yakasa-pagoda.jpg"/>
                         <img src="/images/backgrounds/Torii-Gate1.jpg"/>
@@ -46,13 +53,6 @@ function Home(props){
 
                     {/* <div> <img src="/images/laotzu-1000-miles.jpg"/> </div> */}
 
-                </div>
-            }
-
-            {props.theUser && 
-                <span>
-                    <Link to="/trips" style={{ textDecoration: 'none', color: '#00B7FF', margin: '10px' }}> To begin, visit the My Trips page </Link>
-                </span>
             }
         </body>
     )

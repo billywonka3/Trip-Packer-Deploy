@@ -67,15 +67,15 @@
 }
 .weather-bar iframe {
     margin-top: -220px;
-    margin-left: -165px;
-    padding-right: 50px;
+    margin-left: -245px;
+    padding-right: 30px;
     height: 500px;
     overflow: hidden;
     background:white;
     opacity: 0.85;
 }
 iframe {
-    width: 665px;
+    width: 765px;
     padding-right: 30px;
     z-index: -1;
     /* position: relative; */
@@ -142,7 +142,7 @@ p {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     background:white;
-    opacity: 0.8;
+    opacity: 0.88;
     border-radius: 5px;
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;

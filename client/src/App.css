@@ -49,6 +49,7 @@ body {
   width: 465px;
   text-align: center;
   padding: 25px 85px 75px;
+  margin-top: -25px;
   background:white;
   opacity: 0.8;
   border-radius: 20px;

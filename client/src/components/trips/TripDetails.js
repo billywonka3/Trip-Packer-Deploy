@@ -10,6 +10,7 @@ import AddToiletries from '../items/AddToiletries.js';
 import AddElectronics from '../items/AddElectronics.js';
 import AddHousehold from '../items/AddHousehold.js';
 
+import Carousel from '../carousels/Carousel1.js';
 class TripDetails extends Component{
     constructor(props){
         super(props)
@@ -254,8 +255,8 @@ class TripDetails extends Component{
 
                     <div className="top-window">
                         <div className="left-side">
-                            <div class="forecast-box">
-                                <div class="morph-bar">
+                            <div className="forecast-box">
+                                <div className="morph-bar">
                                     <i> To get the Weather Forecast for your destination : </i>
                                 </div>
                                 <div className="details-text">
@@ -284,8 +285,8 @@ class TripDetails extends Component{
                             </div>
                         </div>
 
-                        <div className="right-side">
-                            
+                        <div id="container" className="right-side">
+                            <Carousel/>
                         </div>
                     </div>
 

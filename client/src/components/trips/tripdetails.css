@@ -85,7 +85,7 @@ iframe {
 } */
 
 /* Right-side Carousel */
-.right-side {
+/* .right-side {
     --slider-height-percentage: 60%;
     --slider-transition-duration: 700ms;
     --organic-arrow-thickness: 4px;
@@ -99,6 +99,43 @@ iframe {
     --control-bullet-active-color: #d5d5d5;
     --loader-bar-color: #851515;
     --loader-bar-height: 6px;
+} */
+.carousel {
+    position: relative;
+    height: 382.5px;
+    width: 440px;
+	margin-bottom: 10px;
+}
+.image-slide {
+	height: 100%;
+    width: 100%;
+	transition: background-image .3s ease-in-out;
+}
+.slide-arrow {
+	cursor: pointer;
+    font-size: 2rem;
+    opacity: 0.5;
+    top: 44.5%;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+    color: white;
+}
+.slide-arrow.right {
+    right: 1rem;
+    height: 55%;
+    width: 50px;
+    position: absolute;
+    left: 403px;
+    top: 172px;
+    z-index: 2;
+}
+.slide-arrow.left {
+    left: 1rem;
+    width: 50px;
+    position: absolute;
+    left: 7px;
+    z-index: 2;
 }
 
 /* Item Columns for Clothing, Toiletries, Electronics, & Special */

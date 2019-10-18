@@ -11,6 +11,7 @@ import AddElectronics from '../items/AddElectronics.js';
 import AddHousehold from '../items/AddHousehold.js';
 
 import Carousel from '../carousels/Carousel1.js';
+
 class TripDetails extends Component{
     constructor(props){
         super(props)
@@ -81,7 +82,6 @@ class TripDetails extends Component{
         script.src = `https://darksky.net/widget/default/${this.state.latitude},${this.state.longitude}/us12/en.js`
         script.async = true;
         document.body.appendChild(script);
-
     }
 
     resetEdit = () =>{
@@ -158,30 +158,24 @@ class TripDetails extends Component{
                 </iframe>
             )
         }
-        // const showForecast = () => {    
-        //     return(
-        //         <div>
-        //             {this.getForecast()}
-        //         </div>
-        //     )
-        // }
 
         const showClothing = () =>{
             return theActualTrip.clothing.map((eachClothing, index)=>{
                 // console.log(eachClothing)
                 if(this.state.editing !== index)
-                    return ( <li>
-                                <div className="list-and-btn">
-                                    <div>
-                                        {/* <h4>{eachClothing.category}</h4> */}
-                                        <p>{eachClothing.name}</p>
-                                    </div>
-                                    <div>
-                                        <button onClick = {()=>{this.edit(index)}}>Edit</button>
-                                        <button className="delete-btn" onClick = {()=>{this.deleteClothing(eachClothing._id)}}>Delete</button>
-                                    </div>
+                    return ( 
+                        <li>
+                            <div className="list-and-btn">
+                                <div>
+                                    {/* <h4>{eachClothing.category}</h4> */}
+                                    <p>{eachClothing.name}</p>
                                 </div>
-                            </li>
+                                <p>
+                                    <button onClick = {()=>{this.edit(index)}}>Edit</button>
+                                    <button className="delete-btn" onClick = {()=>{this.deleteClothing(eachClothing._id)}}>Delete</button>
+                                </p>
+                            </div>
+                        </li>
                     )
                 else
                     return(
@@ -197,16 +191,17 @@ class TripDetails extends Component{
         const showToiletries = () =>{
             return theActualTrip.toiletries.map((eachToiletries)=>{
                 // console.log(eachToiletries)
-                return ( <li key={eachToiletries._id} >
-                            <div className="list-and-btn">
-                                <div>
-                                    <p>{eachToiletries.name}</p>
-                                </div>
-                                <div>
-                                    <button className="delete-btn" onClick = {()=>{this.deleteToiletries(eachToiletries._id)}}>Delete</button>
-                                </div>
+                return ( 
+                    <li key={eachToiletries._id} >
+                        <div className="list-and-btn">
+                            <div>
+                                <p>{eachToiletries.name}</p>
                             </div>
-                        </li>
+                            <p>
+                                <button className="delete-btn" onClick = {()=>{this.deleteToiletries(eachToiletries._id)}}>Delete</button>
+                            </p>
+                        </div>
+                    </li>
                 )
             })  
         }
@@ -214,16 +209,17 @@ class TripDetails extends Component{
         const showElectronics = () =>{
             return theActualTrip.electronics.map((eachElectronics)=>{
                 // console.log(eachElectronics)
-                return ( <li key={eachElectronics._id}>
-                            <div className="list-and-btn">
-                                <div>
-                                    <p>{eachElectronics.name}</p>
-                                </div>
-                                <p>
-                                    <button className="delete-btn" onClick = {()=>{this.deleteElectronics(eachElectronics._id)}}>Delete</button>
-                                </p>
+                return ( 
+                    <li key={eachElectronics._id}>
+                        <div className="list-and-btn">
+                            <div>
+                                <p>{eachElectronics.name}</p>
                             </div>
-                        </li>
+                            <p>
+                                <button className="delete-btn" onClick = {()=>{this.deleteElectronics(eachElectronics._id)}}>Delete</button>
+                            </p>
+                        </div>
+                    </li>
                 )
             })  
         }
@@ -231,21 +227,22 @@ class TripDetails extends Component{
         const showHousehold = () =>{
             return theActualTrip.household.map((eachHousehold)=>{
                 // console.log(eachHousehold)
-                return ( <li key={eachHousehold._id}>
-                            <div className="list-and-btn">
-                                <div>
-                                    <p>{eachHousehold.name}</p>
-                                </div>
-                                <p>
-                                    <button className="delete-btn" onClick = {()=>{this.deleteHousehold(eachHousehold._id)}}>Delete</button>
-                                </p>
+                return ( 
+                    <li key={eachHousehold._id}>
+                        <div className="list-and-btn">
+                            <div>
+                                <p>{eachHousehold.name}</p>
                             </div>
-                        </li>
+                            <p>
+                                <button className="delete-btn" onClick = {()=>{this.deleteHousehold(eachHousehold._id)}}>Delete</button>
+                            </p>
+                        </div>
+                    </li>
                 )
             })  
         }
 
-        if(this.props.ready)
+         if(this.props.ready)
             return(
                 <div style={{paddingTop: '20px'}}>
                     <div className="details-text">

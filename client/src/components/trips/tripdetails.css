@@ -94,7 +94,6 @@ iframe {
     --organic-arrow-color: #d5d5d5;
     --control-button-width: 10%;
     --control-button-height: 25%;
-
     --control-button-background: transparent;
     --control-bullet-color: #fafafa;
     --control-bullet-active-color: #d5d5d5;
@@ -133,6 +132,7 @@ iframe {
 }
 .slide-arrow.left {
     left: 1rem;
+    height: 56%;
     width: 50px;
     position: absolute;
     left: 7px;

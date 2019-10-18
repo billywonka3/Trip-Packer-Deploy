@@ -68,7 +68,6 @@
 .weather-bar iframe {
     margin-top: -220px;
     margin-left: -245px;
-    padding-right: 30px;
     height: 500px;
     overflow: hidden;
     background:white;
@@ -155,7 +154,7 @@ p {
 }
 .item-columns {
     display: flex;
-    margin: 10px 50px;
+    margin: 10px 0 0 15px;;
     justify-content: center;
     flex-wrap: wrap;
 }

@@ -6,17 +6,20 @@
 }
 .morph-bar i {
     color: teal;
-    font-size: 20px;
+    font-size: 18px;
+    text-align: center;
+    /* width: 250px; */
 }
 .details-text {
     display: flex;
     justify-content: center;
+    margin-bottom: -10px;
 }
 .details-text h2 {
     font-family: 'Qwigley', cursive, sans-serif;
     font-size: 55px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 .trip-details {
     display: flex;
@@ -57,27 +60,31 @@
     flex-direction: column;
     align-items: center;  
     /* border: double; */
-    width: 600px;
+    position:relative;
+    right: 28px;
+    margin-bottom: 5px;
+}
+.forecast-box {
+    width: 400px;
 }
 .weather-bar {
     display: flex;
     justify-content: center;
     overflow: hidden;
-    margin-bottom: 20px;
 }
 .weather-bar iframe {
-    margin-top: -220px;
-    margin-left: -245px;
+    margin-top: -215px;
+    margin-left: -250px;
     height: 500px;
     overflow: hidden;
     background:white;
     opacity: 0.85;
 }
 iframe {
-    width: 765px;
-    padding-right: 30px;
+    width: 785px;
+    right: 15px;
     z-index: -1;
-    /* position: relative; */
+    position: relative;
 }
 /* iframe html{
     overflow: hidden !important;
@@ -101,14 +108,17 @@ iframe {
 } */
 .carousel {
     position: relative;
-    height: 382.5px;
-    width: 440px;
-	margin-bottom: 10px;
+    top: 4px;
+    height: 370px;
+    width: 400px;
+    margin-bottom: 5px;
 }
 .image-slide {
 	height: 100%;
     width: 100%;
-	transition: background-image .3s ease-in-out;
+    transition: background-image .3s ease-in-out;
+    position: relative;
+    right: 30px;
 }
 .slide-arrow {
 	cursor: pointer;
@@ -125,7 +135,7 @@ iframe {
     height: 55%;
     width: 50px;
     position: absolute;
-    left: 403px;
+    left: 333px;
     top: 172px;
     z-index: 2;
 }
@@ -134,7 +144,7 @@ iframe {
     height: 56%;
     width: 50px;
     position: absolute;
-    left: 7px;
+    left: -33px;
     z-index: 2;
 }
 
@@ -151,10 +161,12 @@ p {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-left: 140px;
 }
 .item-columns {
     display: flex;
-    margin: 10px 0 0 15px;;
+    margin-top: 10px;
+    margin-left: 11px;
     justify-content: center;
     flex-wrap: wrap;
 }

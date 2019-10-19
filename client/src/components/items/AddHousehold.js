@@ -14,7 +14,6 @@ class AddHousehold extends Component {
   handleFormSubmit = (event) => {
     event.preventDefault();
     axios.post(`${process.env.REACT_APP_BASE}/household`, {
-    // axios.post("http://localhost:5000/api/household", {
         theName: this.state.newName,
         // theWeight: this.state.newWeight,
         theTrip: this.props.theTripToAddHouseholdTo

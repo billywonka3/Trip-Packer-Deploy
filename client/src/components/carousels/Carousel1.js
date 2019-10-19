@@ -1,14 +1,19 @@
 import React from 'react';
 
 const imgUrls = [
-  "https://res.cloudinary.com/nimbuscloud/image/upload/v1571361070/trip-packing%20hacks/en4und9tljzg9awepkui.jpg", 
   "https://res.cloudinary.com/nimbuscloud/image/upload/v1571361070/trip-packing%20hacks/kc3zjmfy68rgac0ws6yu.jpg",
   "https://res.cloudinary.com/nimbuscloud/image/upload/v1571361070/trip-packing%20hacks/p0hxuhjxkyjso7kb8ney.jpg",
   "https://res.cloudinary.com/nimbuscloud/image/upload/v1571361070/trip-packing%20hacks/jaomz7ltstk6pppzgykq.jpg",
+  "https://res.cloudinary.com/nimbuscloud/image/upload/v1571456231/trip-packing%20hacks/yzgjr4ojxkvidvmmuu7m.jpg",
+  "https://res.cloudinary.com/nimbuscloud/image/upload/v1571456231/trip-packing%20hacks/f2hftfdiiwmsugixpjbu.jpg",
+  "https://res.cloudinary.com/nimbuscloud/image/upload/v1571456237/trip-packing%20hacks/ukzbcyu6ldbixvucbuqf.jpg",
   "https://res.cloudinary.com/nimbuscloud/image/upload/v1571361070/trip-packing%20hacks/ivof0trwjdwummlchbgc.jpg",
   "https://res.cloudinary.com/nimbuscloud/image/upload/v1571361070/trip-packing%20hacks/i5hvkd7bng5prmwzdn5c.jpg",
   "https://res.cloudinary.com/nimbuscloud/image/upload/v1571361070/trip-packing%20hacks/nc766ondnswb06dspdkx.jpg",
-  "https://res.cloudinary.com/nimbuscloud/image/upload/v1571361070/trip-packing%20hacks/zqcquyje78kvkwx8uvwa.jpg"
+  "https://res.cloudinary.com/nimbuscloud/image/upload/v1571361070/trip-packing%20hacks/zqcquyje78kvkwx8uvwa.jpg",
+  "https://res.cloudinary.com/nimbuscloud/image/upload/v1571361070/trip-packing%20hacks/en4und9tljzg9awepkui.jpg",
+  "https://res.cloudinary.com/nimbuscloud/image/upload/v1571456410/trip-packing%20hacks/diwm5whzduqdjfdirqby.jpg",
+  "https://res.cloudinary.com/nimbuscloud/image/upload/v1571457818/trip-packing%20hacks/wgbpkfyaq6xuhxwc4qio.jpg"
 ];
 
 class Carousel extends React.Component {

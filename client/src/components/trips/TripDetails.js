@@ -8,6 +8,7 @@ import AddClothing from '../items/AddClothing.js';
 import EditClothing from '../items/EditClothing.js';
 import AddToiletries from '../items/AddToiletries.js';
 import AddElectronics from '../items/AddElectronics.js';
+import AddSpecials from '../items/AddSpecials.js';
 import AddHousehold from '../items/AddHousehold.js';
 
 import Carousel from '../carousels/Carousel1.js';
@@ -101,6 +102,16 @@ class TripDetails extends Component{
             console.log(err)
         })
     }
+    deleteElectronics = (theID) =>{
+        axios.delete(`${process.env.REACT_APP_BASE}/electronics/`+theID)
+        // axios.delete(`http://localhost:5000/api/electronics/`+theID)
+        .then(() =>{
+            this.props.getData();
+        })
+        .catch((err) =>{
+            console.log(err)
+        })
+    }
     deleteToiletries = (theID) =>{
         axios.delete(`${process.env.REACT_APP_BASE}/toiletries/`+theID)
         // axios.delete(`http://localhost:5000/api/toiletries/`+theID)
@@ -111,9 +122,9 @@ class TripDetails extends Component{
             console.log(err)
         })
     }
-    deleteElectronics = (theID) =>{
-        axios.delete(`${process.env.REACT_APP_BASE}/electronics/`+theID)
-        // axios.delete(`http://localhost:5000/api/electronics/`+theID)
+    deleteSpecials = (theID) =>{
+        axios.delete(`${process.env.REACT_APP_BASE}/specials/`+theID)
+        // axios.delete(`http://localhost:5000/api/specials/`+theID)
         .then(() =>{
             this.props.getData();
         })
@@ -188,6 +199,24 @@ class TripDetails extends Component{
             })  
         }
 
+        const showElectronics = () =>{
+            return theActualTrip.electronics.map((eachElectronics)=>{
+                // console.log(eachElectronics)
+                return ( 
+                    <li key={eachElectronics._id}>
+                        <div className="list-and-btn">
+                            <div>
+                                <p>{eachElectronics.name}</p>
+                            </div>
+                            <p>
+                                <button className="delete-btn" onClick = {()=>{this.deleteElectronics(eachElectronics._id)}}>Delete</button>
+                            </p>
+                        </div>
+                    </li>
+                )
+            })  
+        }
+
         const showToiletries = () =>{
             return theActualTrip.toiletries.map((eachToiletries)=>{
                 // console.log(eachToiletries)
@@ -206,17 +235,17 @@ class TripDetails extends Component{
             })  
         }
 
-        const showElectronics = () =>{
-            return theActualTrip.electronics.map((eachElectronics)=>{
-                // console.log(eachElectronics)
+        const showSpecials = () =>{
+            return theActualTrip.specials.map((eachSpecials)=>{
+                // console.log(eachSpecials)
                 return ( 
-                    <li key={eachElectronics._id}>
+                    <li key={eachSpecials._id} >
                         <div className="list-and-btn">
                             <div>
-                                <p>{eachElectronics.name}</p>
+                                <p>{eachSpecials.name}</p>
                             </div>
                             <p>
-                                <button className="delete-btn" onClick = {()=>{this.deleteElectronics(eachElectronics._id)}}>Delete</button>
+                                <button className="delete-btn" onClick = {()=>{this.deleteSpecials(eachSpecials._id)}}>Delete</button>
                             </p>
                         </div>
                     </li>
@@ -288,6 +317,24 @@ class TripDetails extends Component{
                     </div>
 
                     <div className="item-columns">
+                        <div className= "item-column">
+                            <h3><u>Specials</u></h3>
+                            <div>
+                                <hr />
+                                {theActualTrip.specials.length > 0 && 
+                                    <ul>
+                                        {showSpecials()}
+                                    </ul>                           
+                                }
+                                <hr /> 
+                            </div>
+                            <div className= "add-item">
+                                <AddSpecials
+                                    theTripToAddSpecialsTo = {theActualTrip._id} 
+                                    getData = {this.props.getData}
+                                />
+                            </div>
+                        </div>
                         <div className= "item-column">
                             <h3><u>Clothing</u></h3>
                             <div>

@@ -161,7 +161,7 @@ p {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-left: 140px;
+    margin-left: 50px;
 }
 .item-columns {
     display: flex;

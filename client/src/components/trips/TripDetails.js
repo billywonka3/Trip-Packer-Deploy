@@ -389,7 +389,7 @@ class TripDetails extends Component{
                                 />
                             </div>
                         </div>
-                        <div className="home-prep item-columns">
+                        <div className="home-prep item-column">
                             <div className="item-column">
                                 <h3><u>Home-Prep Tasks</u></h3>
                                 <div>
